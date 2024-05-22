@@ -34,6 +34,7 @@ public class IndexServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         EntityManager em = DBUtil.createEntityManager();
 
+        // リストの型注意
         List words = em.createNamedQuery("getAllDate", wordDTO.class).getResultList();
 
         em.close();

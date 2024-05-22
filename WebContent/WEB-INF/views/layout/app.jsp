@@ -8,13 +8,13 @@
     <body>
         <div id="wrapper">
             <div id="header">
-                <h1>ヘッダー</h1>
+                <h1>仮ヘッダー</h1>
             </div>
             <div id="content">
                 ${param.content}
             </div>
             <div id="footer">
-                フッター
+                仮フッター
             </div>
         </div>
     </body>

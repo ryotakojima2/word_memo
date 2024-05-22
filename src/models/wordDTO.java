@@ -15,7 +15,7 @@ import javax.persistence.Table;
 @NamedQueries({
     @NamedQuery(
         name = "getAllDate",
-        query = "SELECT * FROM Word ORDER BY ID"
+        query = "SELECT * FROM Word ORDER BY ID DESC"
     )
 })
 
