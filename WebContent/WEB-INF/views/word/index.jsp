@@ -7,7 +7,7 @@
             <c:forEach var="word" items="${words}">
                 <li>
                     <a href="${pageContext.request.contextPath}/show?id=${word.id}">
-                        <c:out value="${ward.NAME}"></c:out>
+                        ・<c:out value="${ward.NAME}"></c:out>
                     </a>
                 </li>
             </c:forEach>

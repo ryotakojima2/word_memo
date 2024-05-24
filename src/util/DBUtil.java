@@ -5,7 +5,7 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
 public class DBUtil {
-    private static final String PERSISTENCE_UNIT_NAME = "persistence.xml";
+    private static final String PERSISTENCE_UNIT_NAME = "wordmemo";
     private static EntityManagerFactory emf;
 
     public static EntityManager createEntityManager() {

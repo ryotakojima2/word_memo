@@ -34,14 +34,13 @@ public class IndexServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         EntityManager em = DBUtil.createEntityManager();
 
-        // リストの型注意
-        List words = em.createNamedQuery("getAllDate", wordDTO.class).getResultList();
+        List<wordDTO> words = em.createNamedQuery("getAllWordData", wordDTO.class).getResultList();
 
         em.close();
 
         request.setAttribute("words", words);
 
-        RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/words/index.jsp");
+        RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/word/index.jsp");
         rd.forward(request, response);
 
     }

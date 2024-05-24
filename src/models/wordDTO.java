@@ -13,13 +13,10 @@ import javax.persistence.Table;
 
 @Entity
 @NamedQueries({
-    @NamedQuery(
-        name = "getAllDate",
-        query = "SELECT * FROM Word ORDER BY ID DESC"
-    )
+    @NamedQuery(name = "getAllWordData", query = "SELECT w FROM wordDTO w ORDER BY w.id")
 })
 
-@Table(name = "Word")
+@Table(name = "word")
 public class wordDTO {
 
     @Id
