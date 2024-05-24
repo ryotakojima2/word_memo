@@ -8,7 +8,7 @@
     <body>
         <div id="wrapper">
             <div id="header">
-                <h1>仮ヘッダー</h1>
+                <h1>IT特化単語帳</h1>
             </div>
             <div id="content">
                 ${param.content}
