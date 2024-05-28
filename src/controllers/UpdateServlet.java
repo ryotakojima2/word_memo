@@ -37,7 +37,7 @@ public class UpdateServlet extends HttpServlet {
 
             // セッションスコープからメッセージのIDを取得して
             // 該当のIDのメッセージ1件のみをデータベースから取得
-            Word u = em.find(Word.class, (Integer)(request.getSession().getAttribute("id")));
+            Word u = em.find(Word.class, Integer.parseInt(request.getParameter("id")));
 
             // フォームの内容を各フィールドに上書き
             String name = request.getParameter("name");
@@ -61,7 +61,7 @@ public class UpdateServlet extends HttpServlet {
             request.getSession().removeAttribute("word_id");
 
             // indexページへリダイレクト
-            response.sendRedirect(request.getContextPath() + "/index");
+            response.sendRedirect(request.getContextPath() + "/WEB-INF/views/word/index");
         }
     }
 }

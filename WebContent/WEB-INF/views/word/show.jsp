@@ -23,8 +23,12 @@
 
 
         <p><a href="${pageContext.request.contextPath}/index">単語一覧</a></p>
- <p><a href="${pageContext.request.contextPath}/edit?id=${word.id}">編集する</a></p>
- <p><a href="${pageContext.request.contextPath}/destroy?id=${word.id}">削除する</a></p>
+        <p><a href="${pageContext.request.contextPath}/edit?id=${word.id}">編集する</a></p>
+
+        <form action="destroy" method="post">
+            <input type="hidden" name="id" value="${word.id}">
+            <input type="submit" value="この単語を削除する">
+        </form>
 
     </c:param>
 </c:import>

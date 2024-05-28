@@ -22,15 +22,24 @@ public class MeaningServlet extends HttpServlet {
         int id = Integer.parseInt(request.getParameter("id"));
         EntityManager em = DBUtil.createEntityManager();
         EntityTransaction tx = em.getTransaction();
-        tx.begin();
+        try {
+            tx.begin();
+            Word record = em.find(Word.class, id);
+            tx.commit();
 
-        Word record = em.find(Word.class, id);
+            em.close();
 
-        tx.commit();
-        em.close();
-
-        // JSPに意味を渡す
-        request.setAttribute("mean", record.getMean());
-        request.getRequestDispatcher("/WEB-INF/views/word/random.jsp").forward(request, response);
+            // JSPに意味を渡す
+            request.setAttribute("meaning", record.getMean());
+            request.setAttribute("randomRecord", record); // ランダムなレコードも再度セットしておく
+            request.getRequestDispatcher("/WEB-INF/views/word/random.jsp").forward(request, response);
+        } catch (Exception e) {
+            if (tx.isActive()) {
+                tx.rollback();
+            }
+            throw new ServletException(e);
+        } finally {
+            em.close();
+        }
     }
 }
