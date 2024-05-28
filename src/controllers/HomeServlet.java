@@ -37,12 +37,13 @@ public class HomeServlet extends HttpServlet {
 
         // 単語の一覧を取得
         List<Word> homewords = em.createNamedQuery("getAllWordData", Word.class).getResultList();
-        request.setAttribute("words", homewords);
 
         // ジャンルの一覧を取得
         // ※カテゴリーのみアプリケーションスコープを使用するかも
         List<Category> homecategorys = em.createNamedQuery("getAllCategoryData", Category.class).getResultList();
         em.close();
+
+        request.setAttribute("words", homewords);
         request.setAttribute("categorys", homecategorys);
 
 

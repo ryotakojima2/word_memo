@@ -22,7 +22,7 @@
         <p>作成日時：<fmt:formatDate value="${word.date}" pattern="yyyy-MM-dd HH:mm:ss" /></p>
 
 
-        <p><a href="${pageContext.request.contextPath}/index">一覧に戻る</a></p>
+        <p><a href="${pageContext.request.contextPath}/index">単語一覧</a></p>
  <p><a href="${pageContext.request.contextPath}/edit?id=${word.id}">編集する</a></p>
  <p><a href="${pageContext.request.contextPath}/destroy?id=${word.id}">削除する</a></p>
 

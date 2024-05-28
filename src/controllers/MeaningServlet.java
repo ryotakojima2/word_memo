@@ -30,7 +30,7 @@ public class MeaningServlet extends HttpServlet {
         em.close();
 
         // JSPに意味を渡す
-        request.setAttribute("meaning", record.getMean());
-        request.getRequestDispatcher("/random.jsp").forward(request, response);
+        request.setAttribute("mean", record.getMean());
+        request.getRequestDispatcher("/WEB-INF/views/word/random.jsp").forward(request, response);
     }
 }

@@ -20,13 +20,15 @@
             <input type="submit" value="送信">
         </form>
 
-         <form action="nextRecord" method="post">
-        <input type="hidden" name="id" value="${randomRecord.id}">
-        <input type="submit" value="次へ">
-    </form>
+        <form action="nextrecord" method="post">
+            <input type="hidden" name="id" value="${randomRecord.id}">
+            <input type="submit" value="次へ">
+        </form>
     </c:if>
     <c:if test="${empty randomRecord}">
         <p>ランダムなレコードが見つかりませんでした。</p>
     </c:if>
+
+    <p><a href="${pageContext.request.contextPath}/home">ホームへ戻る</a></p>
 </body>
 </html>

@@ -51,6 +51,6 @@ public class CheckboxServlet extends HttpServlet {
 
         // JSPにチェック状態を渡す
         request.setAttribute("isChecked", fragment);
-        request.getRequestDispatcher("/random.jsp").forward(request, response);
+        request.getRequestDispatcher("/WEB-INF/views/word/random.jsp").forward(request, response);
     }
 }

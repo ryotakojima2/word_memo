@@ -28,7 +28,7 @@ public class NextRecordServlet extends HttpServlet {
         EntityTransaction tx = em.getTransaction();
         tx.begin();
 
-        TypedQuery<Word> query = em.createQuery("SELECT w FROM wordDTO w WHERE w.id > :id ORDER BY w.id ASC", Word.class);
+        TypedQuery<Word> query = em.createQuery("SELECT w FROM Word w WHERE w.id > :id ORDER BY w.id ASC", Word.class);
         query.setParameter("id", Integer.parseInt(request.getParameter("id")));
         query.setMaxResults(1);
         List<Word> records = query.getResultList();
@@ -41,6 +41,6 @@ public class NextRecordServlet extends HttpServlet {
         em.close();
 
         request.setAttribute("randomRecord", randomRecord);
-        request.getRequestDispatcher("/random.jsp").forward(request, response);
+        request.getRequestDispatcher("/WEB-INF/views/word/random.jsp").forward(request, response);
     }
 }

@@ -29,7 +29,7 @@
 
                 <c:forEach var="category" items="${categorys}">
                     <li>
-                        <a href="${pageContext.request.contextPath}/show?id=${category.categoryId}">
+                        <a href="${pageContext.request.contextPath}/showcategory?categoryId=${category.categoryId}">
                             <c:out value="${category.categoryName}"></c:out>
                         </a>
                     </li>
