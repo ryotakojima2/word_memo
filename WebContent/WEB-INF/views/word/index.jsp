@@ -7,14 +7,14 @@
             <c:forEach var="word" items="${words}">
                 <li>
                     <a href="${pageContext.request.contextPath}/show?id=${word.id}">
-                        ・<c:out value="${ward.NAME}"></c:out>
+                        <c:out value="${word.name}"/>
                     </a>
                 </li>
             </c:forEach>
         </ul>
 
         <p><a href="${pageContext.request.contextPath}/new">単語の追加</a></p>
-        <p><a href="${pageContext.request.contextPath}/new">戻る</a></p>
+        <p><a href="${pageContext.request.contextPath}/home">ホームへ戻る</a></p>
 
 
     </c:param>

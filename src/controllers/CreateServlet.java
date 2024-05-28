@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import models.wordDTO;
+import models.Word;
 import util.DBUtil;
 
 /**
@@ -37,7 +37,7 @@ public class CreateServlet extends HttpServlet {
             EntityManager em = DBUtil.createEntityManager();
             em.getTransaction().begin();
 
-            wordDTO w = new wordDTO();
+            Word w = new Word();
 
             String name = request.getParameter("name");
             w.setName(name);
@@ -47,6 +47,9 @@ public class CreateServlet extends HttpServlet {
 
             Timestamp date = new Timestamp(System.currentTimeMillis());
             w.setDate(date);
+
+            int categoryId = Integer.parseInt(request.getParameter("category"));
+            w.setCategory(categoryId);
 
             em.persist(w);
             em.getTransaction().commit();

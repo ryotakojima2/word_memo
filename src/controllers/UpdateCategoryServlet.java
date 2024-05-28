@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import models.categoryDTO;
+import models.Category;
 import util.DBUtil;
 
 /**
@@ -36,7 +36,7 @@ public class UpdateCategoryServlet extends HttpServlet {
 
             // セッションスコープからカテゴリーのIDを取得して
             // 該当のIDのカテゴリー1件のみをデータベースから取得
-            categoryDTO c = em.find(categoryDTO.class, (Integer)(request.getSession().getAttribute("categoryId")));
+            Category c = em.find(Category.class, (Integer)(request.getSession().getAttribute("categoryId")));
 
             // フォームの内容を各フィールドに上書き
             String categoryName = request.getParameter("categoryName");

@@ -11,10 +11,10 @@ import javax.persistence.Table;
 
 @Entity
 @NamedQueries({
-    @NamedQuery(name = "getAllCategoryData", query = "SELECT w FROM categoryDTO w ORDER BY w.categoryId")
+    @NamedQuery(name = "getAllCategoryData", query = "SELECT w FROM Category w ORDER BY w.categoryId")
 })
 @Table(name = "category")
-public class categoryDTO {
+public class Category {
 
     @Id
     @Column(name = "CategoryID")

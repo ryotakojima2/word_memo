@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import models.categoryDTO;
+import models.Category;
 
 /**
  * Servlet implementation class NewCategoryServlet
@@ -33,7 +33,7 @@ public class NewCategoryServlet extends HttpServlet {
         request.setAttribute("_token", request.getSession().getId());
 
         // おまじないとしてのインスタンスを生成
-        request.setAttribute("category", new categoryDTO());
+        request.setAttribute("category", new Category());
 
         RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/word/newCategory.jsp");
         rd.forward(request, response);

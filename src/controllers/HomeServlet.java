@@ -11,8 +11,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import models.categoryDTO;
-import models.wordDTO;
+import models.Category;
+import models.Word;
 import util.DBUtil;
 
 /**
@@ -36,12 +36,12 @@ public class HomeServlet extends HttpServlet {
         EntityManager em = DBUtil.createEntityManager();
 
         // 単語の一覧を取得
-        List<wordDTO> homewords = em.createNamedQuery("getAllWordData", wordDTO.class).getResultList();
+        List<Word> homewords = em.createNamedQuery("getAllWordData", Word.class).getResultList();
         request.setAttribute("words", homewords);
 
         // ジャンルの一覧を取得
         // ※カテゴリーのみアプリケーションスコープを使用するかも
-        List<categoryDTO> homecategorys = em.createNamedQuery("getAllCategoryData", categoryDTO.class).getResultList();
+        List<Category> homecategorys = em.createNamedQuery("getAllCategoryData", Category.class).getResultList();
         em.close();
         request.setAttribute("categorys", homecategorys);
 

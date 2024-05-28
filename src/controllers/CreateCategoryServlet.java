@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import models.categoryDTO;
+import models.Category;
 import util.DBUtil;
 
 /**
@@ -35,7 +35,7 @@ public class CreateCategoryServlet extends HttpServlet {
             EntityManager em = DBUtil.createEntityManager();
             em.getTransaction().begin();
 
-            categoryDTO c = new categoryDTO();
+            Category c = new Category();
 
             String categoryName = request.getParameter("categoryName");
             c.setCategoryName(categoryName);

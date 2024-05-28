@@ -1,7 +1,9 @@
 package controllers;
 
 import java.io.IOException;
+import java.util.List;
 
+import javax.persistence.EntityManager;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -9,7 +11,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import models.wordDTO;
+import models.Category;
+import models.Word;
+import util.DBUtil;
 
 /**
  * Servlet implementation class NewServlet
@@ -34,7 +38,17 @@ public class NewServlet extends HttpServlet {
         request.setAttribute("_token", request.getSession().getId());
 
         // おまじないとしてのインスタンスを生成
-        request.setAttribute("word", new wordDTO());
+        request.setAttribute("newword", new Word());
+        request.setAttribute("category", new Category());
+
+        // カテゴリー一覧を取得
+        EntityManager em = DBUtil.createEntityManager();
+
+        List<Category> categories = em.createNamedQuery("getAllCategoryData", Category.class).getResultList();
+
+        em.close();
+
+        request.setAttribute("categories", categories);
 
         RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/word/new.jsp");
         rd.forward(request, response);

@@ -4,11 +4,11 @@
     <c:param name="content">
         <h2>id : ${word.name} の編集ページ</h2>
 
-        <form method="POST" action="${pageContext.request.contextPath}/update">
-            <c:import url="_form.jsp" />
+        <form method="POST" action="${pageContext.request.contextPath}/update?id=${word.id}">
+            <c:import url="update_form.jsp" />
         </form>
 
-        <p><a href="$リンク">完了</a></p>
+        <p><a href="${pageContext.request.contextPath}/index">単語一覧に戻る</a></p>
 
     </c:param>
 </c:import>

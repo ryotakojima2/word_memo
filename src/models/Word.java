@@ -13,11 +13,11 @@ import javax.persistence.Table;
 
 @Entity
 @NamedQueries({
-    @NamedQuery(name = "getAllWordData", query = "SELECT w FROM wordDTO w ORDER BY w.id")
+    @NamedQuery(name = "getAllWordData", query = "SELECT w FROM Word w ORDER BY w.id")
 })
 
 @Table(name = "word")
-public class wordDTO {
+public class Word {
 
     @Id
     @Column(name = "ID")
@@ -30,7 +30,7 @@ public class wordDTO {
     @Column(name = "Mean", nullable = false)
     private String mean;
 
-    @Column(name = "Fragment", nullable = false)
+    @Column(name = "Fragment", nullable = true)
     private Integer fragment;
 
     @Column(name = "Date", nullable = false)

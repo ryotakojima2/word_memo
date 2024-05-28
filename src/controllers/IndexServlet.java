@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import models.wordDTO;
+import models.Word;
 import util.DBUtil;
 
 /**
@@ -34,7 +34,7 @@ public class IndexServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         EntityManager em = DBUtil.createEntityManager();
 
-        List<wordDTO> words = em.createNamedQuery("getAllWordData", wordDTO.class).getResultList();
+        List<Word> words = em.createNamedQuery("getAllWordData", Word.class).getResultList();
 
         em.close();
 

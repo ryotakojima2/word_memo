@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import models.categoryDTO;
+import models.Category;
 import util.DBUtil;
 
 /**
@@ -34,7 +34,7 @@ public class EditCategoryServlet extends HttpServlet {
         EntityManager em = DBUtil.createEntityManager();
 
         // 該当のIDのカテゴリー1件のみをデータベースから取得
-        categoryDTO c = em.find(categoryDTO.class, Integer.parseInt(request.getParameter("categoryId")));
+        Category c = em.find(Category.class, Integer.parseInt(request.getParameter("categoryId")));
         em.close();
 
         // カテゴリー情報とセッションIDをリクエストスコープに登録
