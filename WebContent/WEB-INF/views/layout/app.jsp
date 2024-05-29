@@ -4,11 +4,12 @@
     <head>
         <meta charset="UTF-8">
         <title>IT特化単語帳</title>
+        <link rel="stylesheet" href="<c:url value='/css/app.css' /> ">
     </head>
     <body>
         <div id="wrapper">
             <div id="header">
-                <h1>IT特化単語帳</h1>
+                <h1>ヘッダー</h1>
             </div>
             <div id="content">
                 ${param.content}

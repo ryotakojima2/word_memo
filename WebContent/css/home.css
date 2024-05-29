@@ -1,0 +1,141 @@
+@charset "UTF-8";
+
+/* グラデーションを設定 */
+body {
+    background: linear-gradient(0deg, blue, aquamarine);
+    /* 左上から右下にグラデーション */
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+/* wrapperのスタイル */
+#wrapper {
+    background-color: rgba(255, 255, 255, 0.8); /* 背景を透明度のある白に設定 */
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 300px;
+    text-align: center;
+    padding-top: 50px; /* 上の余白を詰める */
+}
+
+/* h2のスタイル */
+h2 {
+    font-size: 80px;
+    color: #333;
+    width: 100%;
+    margin-bottom: 20px;
+    line-height:0.95em;
+    font-weight:bold;
+    color: transparent;
+    background: repeating-linear-gradient( 45deg, #04ff0c 0 0.4em, #0091EA 0.4em 0.8em);
+    text-shadow: 0 0 0.2em rgba(255,255,255,1);
+    -webkit-background-clip: text;
+}
+
+/* h3のスタイル */
+h3 {
+    font-size: 24px;
+    color: #333;
+    background-color: #fafad2;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    display: inline-block; /* インラインブロックに変更 */
+    width: 100%; /* 幅を固定 */
+    box-sizing: border-box; /* パディングを含めたボックスサイズを調整 */
+}
+
+h2, h3 {
+    text-transform: uppercase; /* テキストを大文字に変換 */
+    font-weight: bold; /* フォントを太字にする */
+    text-shadow: 0 0 0.2em rgba(255,255,255,0.5);
+}
+
+/* リストのスタイル */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+p {
+    font-size: 25px;
+    display: inline-block; /* インラインブロック要素にする */
+    padding: 10px 20px; /* ボタンの余白 */
+    background-color:#b0c4de; /* 背景色 */
+    color: #f60; /* テキスト色 */
+    text-align: center; /* テキストを中央揃え */
+    text-decoration: none; /* 下線を消す */
+    border: none; /* ボーダーをなくす */
+    border-radius: 100px; /* 角丸にする */
+    cursor: pointer; /* カーソルをポインターに変更 */
+    transition: background-color 0.3s ease; /* ホバー時のアニメーション */
+}
+
+#content p {
+    font-size: 20px; /* 「ジャンルの編集」のフォントサイズを小さく */
+}
+
+p:hover {
+    background-color: #49af4e; /* ホバー時の背景色 */
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+/* リンクのスタイル */
+a {
+    text-decoration: none;
+    color: #007bff;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #404040;
+}
+
+/* オーバーフローを防ぐためのclearfix */
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* ジャンル一覧と単語一覧のスタイル */
+#main ul, #content ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* リストを水平に並べる */
+    flex-wrap: wrap; /* 必要に応じて折り返す */
+}
+
+#main ul li, #content ul li {
+     margin-bottom: 10px;
+    flex: 0 0 calc(50% - 20px); /* 50% 幅で折り返し、間隔を調整 */
+    display: flex; /* li要素を横並びにする */
+    align-items: center; /* li要素を垂直方向に中央揃えにする */
+    width: 100%; /* li要素の幅を100%に設定 */
+    box-sizing: border-box; /* パディングを含めたボックスサイズを調整 */
+}
+
+/* mainとcontent要素の共通スタイル */
+#main, #content {
+    float: left;
+    width: 45%;
+    box-sizing: border-box;
+    margin-right: 10px;
+    border: 2px solid #ccc; /* 境界線を追加 */
+    padding-bottom: 30px; /* 下の余白を追加 */
+    display:flex;/* flex container にする */
+    flex-direction: column; /* 縦方向に配置する */
+    align-items: flex-start; /* 上端に揃える */
+
+}

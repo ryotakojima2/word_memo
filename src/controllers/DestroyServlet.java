@@ -37,7 +37,8 @@ public class DestroyServlet extends HttpServlet {
 
             // セッションスコープからメッセージのIDを取得して
             // 該当のIDのメッセージ1件のみをデータベースから取得
-            Word m = em.find(Word.class, (Integer)(request.getSession().getAttribute("word_id")));
+            Integer messageId = (Integer) request.getSession().getAttribute("id");
+            Word m = em.find(Word.class, messageId);
 
             em.getTransaction().begin();
             em.remove(m);       // データ削除
@@ -46,10 +47,10 @@ public class DestroyServlet extends HttpServlet {
 
             //a
             // セッションスコープ上の不要になったデータを削除
-            request.getSession().removeAttribute("word_id");
+            request.getSession().removeAttribute("id");
 
             // indexページへリダイレクト
-            response.sendRedirect(request.getContextPath() + "/WEB-INF/views/word/index");
+            // response.sendRedirect(request.getContextPath() + "/WEB-INF/views/word/index");
         }
     }
 }

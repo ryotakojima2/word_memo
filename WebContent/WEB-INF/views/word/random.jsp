@@ -19,16 +19,19 @@
             <input type="submit" value="意味を表示">
         </form>
 
-        <form action="Checkbox" method="post">
+        <form action="checkbox" method="post">
             <input type="hidden" name="id" value="${randomRecord.id}">
-            <input type="checkbox" name="checkbox"> チェック
-            <input type="submit" value="送信">
+            <%-- データベースのfragmentの値が1の場合、チェックボックスをチェック済みにする --%>
+            <input type="checkbox" name="fragment" value="1" ${randomRecord.fragment == 1 ? 'checked' : ''}> Check to mark as complete<br>
+            <input type="hidden" name="fragment" value="0">
+            <input type="submit" value="覚えた！">
         </form>
 
-         <form action="nextrecord" method="post">
-        <input type="hidden" name="id" value="${randomRecord.id}">
-        <input type="submit" value="次へ">
-    </form>
+
+        <form action="nextrecord" method="post">
+            <input type="hidden" name="id" value="${randomRecord.id}">
+            <input type="submit" value="次へ">
+        </form>
     </c:if>
     <c:if test="${empty randomRecord}">
         <p>ランダムなレコードが見つかりませんでした。</p>

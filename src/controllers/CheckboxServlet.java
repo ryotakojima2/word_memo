@@ -15,42 +15,28 @@ import util.DBUtil;
 
 @WebServlet("/checkbox")
 public class CheckboxServlet extends HttpServlet {
+
     private static final long serialVersionUID = 1L;
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // リクエストからIDとチェックボックスの値を取得
         int id = Integer.parseInt(request.getParameter("id"));
-        String checkboxValue = request.getParameter("checkbox");
+        int fragmentValue = Integer.parseInt(request.getParameter("fragment"));
 
-        // チェックボックスの値をint型で管理する（チェックされている場合は1、されていない場合は0）
-        int fragment = checkboxValue != null && checkboxValue.equals("on") ? 1 : 0;
-
+        // データベース更新
         EntityManager em = DBUtil.createEntityManager();
         EntityTransaction tx = em.getTransaction();
+        tx.begin();
 
-        try {
-            tx.begin();
+        Word record = em.find(Word.class, id);
+        record.setFragment(fragmentValue);
 
-            // データベースから対応するレコードを取得
-            Word record = em.find(Word.class, id);
+        tx.commit();
+        em.close();
 
-            // チェックボックスの値でフラグメントを更新
-            record.setFragment(fragment);
-
-            // トランザクションをコミット
-            tx.commit();
-        } catch (Exception e) {
-            // トランザクションのロールバック
-            if (tx != null && tx.isActive()) {
-                tx.rollback();
-            }
-            throw new ServletException(e);
-        } finally {
-            em.close();
-        }
-
-        // JSPにチェック状態を渡す
-        request.setAttribute("isChecked", fragment);
+        // 元のページに戻り、チェックボックスの状態を反映させる
+        request.setAttribute("fragment", fragmentValue);
+        request.setAttribute("randomRecord", record); // ランダムなレコードも再度セットしておく
         request.getRequestDispatcher("/WEB-INF/views/word/random.jsp").forward(request, response);
     }
 }

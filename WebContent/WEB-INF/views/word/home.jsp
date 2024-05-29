@@ -3,7 +3,7 @@
 <c:import url="../layout/app.jsp">
     <c:param name="content">
     <head>
-    <link rel="stylesheet" href="<c:url value='/css/style.css' /> ">
+    <link rel="stylesheet" href="<c:url value='/css/home.css' /> ">
     </head>
         <h2>IT特化単語帳</h2>
         <div id="title">
