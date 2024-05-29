@@ -8,6 +8,12 @@
             <c:import url="update_form.jsp" />
         </form>
 
+        <form action="${pageContext.request.contextPath}/destroy" method="post">
+            <input type="hidden" name="_token" value="${_token}" />
+            <input type="hidden" name="id" value="${word.id}">
+            <input type="submit" value="この単語を削除する">
+        </form>
+
         <p><a href="${pageContext.request.contextPath}/index">単語一覧に戻る</a></p>
 
     </c:param>

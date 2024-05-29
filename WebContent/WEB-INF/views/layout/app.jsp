@@ -15,7 +15,7 @@
                 ${param.content}
             </div>
             <div id="footer">
-                仮フッター
+                フッター
             </div>
         </div>
     </body>

@@ -2,6 +2,9 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <c:import url="../layout/app.jsp">
     <c:param name="content">
+    <head>
+        <link rel="stylesheet" href="<c:url value='/css/index.css' /> ">
+    </head>
         <h2>-単語集-</h2>
         <ul>
             <c:forEach var="word" items="${words}">

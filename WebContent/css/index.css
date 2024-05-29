@@ -1,0 +1,59 @@
+@charset "UTF-8";
+
+/* グラデーションを設定 */
+#wrapper {
+    background: linear-gradient(0deg, blue, aquamarine);
+    /* 左上から右下にグラデーション */
+    font-family: Arial, sans-serif;
+    color: #333;
+    padding: 300px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+     text-align: center;
+    padding-top: 50px; /* 上の余白を詰める */
+}
+
+h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #404040;
+}
+
+p {
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+p a {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 10px 20px;
+    background-color: #b0c4de;
+    color: #f60;
+    border-radius: 100px;
+    transition: background-color 0.3s ease;
+}
+
+p a:hover {
+    background-color: #49af4e;
+}

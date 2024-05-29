@@ -25,18 +25,5 @@
         <p><a href="${pageContext.request.contextPath}/index">単語一覧</a></p>
         <p><a href="${pageContext.request.contextPath}/edit?id=${word.id}">編集する</a></p>
 
-        <form action="destroy" method="post" onclick="confirmDestroy();">
-            <input type="hidden" name="_token" value="${_token}" />
-            <input type="hidden" name="id" value="${word.id}">
-            <input type="submit" value="この単語を削除する">
-        </form>
-        <script>
-        function confirmDestroy() {
-            if(confirm("本当に削除してよろしいですか？")) {
-                document.forms[1].submit();
-            }
-        }
-        </script>
-
     </c:param>
 </c:import>
