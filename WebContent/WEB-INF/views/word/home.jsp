@@ -3,30 +3,31 @@
 <c:import url="../layout/app.jsp">
     <c:param name="content">
     <head>
-    <link rel="stylesheet" href="<c:url value='/css/home.css' /> ">
+    <link rel="stylesheet" href="<c:url value='/css/home2.css' /> ">
     </head>
-        <h2>IT特化単語帳</h2>
-        <div id="title">
+    <h2>IT特化単語帳</h2>
+        <div id="study">
             <p><a href="${pageContext.request.contextPath}/random">学習する</a></p>
         </div>
-    <div id="wrapper">
-        <div id="header">
-            <h3><a href="${pageContext.request.contextPath}/index">単語一覧</a></h3>
+        <div id="main">
+        <div id="index">
+                <h3><a href="${pageContext.request.contextPath}/index">単語一覧</a></h3>
             <ul>
-                <c:forEach var="word" items="${words}">
+                <c:forEach var="word" items="${words}" varStatus="loop">
+                <c:if test="${loop.index < 6}">
                     <li>
                         <a href="${pageContext.request.contextPath}/show?id=${word.id}">
                             <c:out value="${word.name}"></c:out>
                         </a>
                     </li>
+                </c:if>
                 </c:forEach>
             </ul>
         </div>
 
-        <div id="content">
+        <div id="category">
             <h3>ジャンル一覧</h3>
             <ul>
-
                 <c:forEach var="category" items="${categorys}">
                     <li>
                         <a href="${pageContext.request.contextPath}/showcategory?categoryId=${category.categoryId}">
@@ -36,6 +37,6 @@
                 </c:forEach>
             </ul>
         </div>
-    </div>
+        </div>
     </c:param>
 </c:import>

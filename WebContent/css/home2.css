@@ -1,0 +1,76 @@
+@charset "UTF-8";
+
+/* ページタイトル */
+h2 {
+    font-size: 80px;
+    color: #333;
+    width: 100%;
+    margin-bottom: 20px;
+    line-height:0.95em;
+    font-weight:bold;
+    color: transparent;
+    background: repeating-linear-gradient( 45deg, #04ff0c 0 0.4em, #0091EA 0.4em 0.8em);
+    text-shadow: 0 0 0.2em rgba(255,255,255,1);
+    -webkit-background-clip: text;
+}
+
+/* 学習ボタン */
+#study {
+    text-align: center; /* テキストを中央揃えにする */
+}
+
+p {
+    font-size: 50px; /* フォントサイズを大きくする */
+    display: inline-block; /* インラインブロック要素にする */
+    padding: 10px 20px; /* ボタンの余白 */
+    background-color:#ffffff; /* 背景色 */
+    color: #f60; /* テキスト色 */
+    text-align: center; /* テキストを中央揃え */
+    text-decoration: none; /* 下線を消す */
+    border: none; /* ボーダーをなくす */
+    border-radius: 100px; /* 角丸にする */
+    cursor: pointer; /* カーソルをポインターに変更 */
+    transition: background-color 0.3s ease; /* ホバー時のアニメーション */
+}
+
+p:hover {
+    background-color: #49af4e; /* ホバー時の背景色 */
+}
+
+/* メイン部分 */
+#main{
+    display: flex; /* Flexbox を使用 */
+    flex-direction: column; /* 縦方向に配置 */
+    align-items: center; /* 中央揃え */
+    background-color: #1473c0;
+    border-radius: 20px; /* 角を丸める */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+    font-weight: bold; /* 太字にする */
+    color: #0079FF; /* 濃いスカイブルー色 */
+}
+
+#index, #category {
+    width: 95%; /* 全体の横幅の90% */
+    max-width: 100%; /* 最大幅を設定 */
+    margin-top: 20px; /* 上のマージンを設定 */
+    background-color: #ffffff;
+    border-radius: 20px; /* 角を丸める */
+    margin-bottom: 20px; /* 下部に20pxのマージンを設定 */
+}
+
+/* 単語一覧 */
+#index {
+
+}
+
+
+
+/* ジャンル一覧 */
+#category{
+
+}
+
+

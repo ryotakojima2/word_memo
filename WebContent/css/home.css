@@ -1,27 +1,15 @@
 @charset "UTF-8";
 
-/* グラデーションを設定 */
 body {
-    background: linear-gradient(0deg, blue, aquamarine);
-    /* 左上から右下にグラデーション */
+    background: linear-gradient(aquamarine, blue, 0deg); /* 左上から右下にグラデーション */
     font-family: Arial, sans-serif;
-    color: #333;
+    color: #ffffff;
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: flex-start;
     min-height: 100vh;
-}
-
-/* wrapperのスタイル */
-#wrapper {
-    background-color: rgba(255, 255, 255, 0.8); /* 背景を透明度のある白に設定 */
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    padding: 300px;
-    text-align: center;
-    padding-top: 50px; /* 上の余白を詰める */
 }
 
 /* h2のスタイル */
@@ -46,8 +34,7 @@ h3 {
     padding: 10px;
     border-radius: 5px;
     margin-bottom: 20px;
-    display: inline-block; /* インラインブロックに変更 */
-    width: 100%; /* 幅を固定 */
+    display: block; /* インラインブロックに変更 */
     box-sizing: border-box; /* パディングを含めたボックスサイズを調整 */
 }
 
@@ -76,10 +63,6 @@ p {
     border-radius: 100px; /* 角丸にする */
     cursor: pointer; /* カーソルをポインターに変更 */
     transition: background-color 0.3s ease; /* ホバー時のアニメーション */
-}
-
-#content p {
-    font-size: 20px; /* 「ジャンルの編集」のフォントサイズを小さく */
 }
 
 p:hover {
@@ -115,6 +98,7 @@ a:hover {
     margin: 0;
     display: flex; /* リストを水平に並べる */
     flex-wrap: wrap; /* 必要に応じて折り返す */
+    justify-content: space-between; /* アイテムを均等に配置 */
 }
 
 #main ul li, #content ul li {

@@ -2,7 +2,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <c:import url="../layout/app.jsp">
     <c:param name="content">
-        <h2>id : ${word.name} の編集ページ</h2>
+        <h2>単語 : ${word.name} の編集ページ</h2>
 
         <form method="POST" action="${pageContext.request.contextPath}/update?id=${word.id}">
             <c:import url="update_form.jsp" />

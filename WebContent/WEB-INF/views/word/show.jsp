@@ -3,13 +3,12 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
-
 <c:import url="../layout/app.jsp">
     <c:param name="content">
 
-        <h2>id : ${word.id} のメッセージ詳細ページ</h2>
+        <h2>単語 : ${word.name} の詳細ページ</h2>
 
-        <p>単語：<c:out value="${word.name}" /></p>
+        <p>単語名称：<c:out value="${word.name}" /></p>
         <p>意味：<c:out value="${word.mean}" /></p>
 
 <c:if test="${word.fragment == 1}">

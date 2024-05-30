@@ -1,15 +1,10 @@
 @charset "UTF-8";
 
-/* グラデーションを設定 */
 body {
-    background: linear-gradient(0deg, blue, aquamarine);
-    /* 左上から右下にグラデーション */
-    font-family: Arial, sans-serif;
-    color: #333;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    min-height: 100vh;
+    color: #2c3c85;
+}
+
+#header {
+    color: #FFFFFF; /* テキストの色を白に設定 */
+    text-align: center; /* テキストを中央揃えにする */
 }

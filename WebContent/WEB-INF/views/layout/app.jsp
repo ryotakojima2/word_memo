@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="ja">
     <head>
@@ -7,16 +8,12 @@
         <link rel="stylesheet" href="<c:url value='/css/app.css' /> ">
     </head>
     <body>
-        <div id="wrapper">
             <div id="header">
-                <h1>ヘッダー</h1>
             </div>
             <div id="content">
                 ${param.content}
             </div>
             <div id="footer">
-                フッター
             </div>
-        </div>
     </body>
 </html>

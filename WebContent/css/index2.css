@@ -1,0 +1,80 @@
+@charset "UTF-8";
+
+/* グラデーションを設定 */
+#wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    overflow-y: auto; /* 縦方向のみスクロール可能にする */
+    background: linear-gradient(0deg, blue, aquamarine);
+    /* 左上から右下にグラデーション */
+    font-family: Arial, sans-serif;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column; /* タイトルとコンテンツを縦方向に配置 */
+}
+
+h2 {
+    text-align: center;
+    font-size: 80px;
+    color: #fff;
+    margin-bottom: 20px;
+    line-height: 0.95em;
+    font-weight: bold;
+    color: transparent;
+    background: repeating-linear-gradient(45deg, #04ff0c 0 0.4em, yellow 0.4em 0.8em);
+    text-shadow: 0 0 0.2em rgba(255, 255, 255, 0.2);
+    -webkit-background-clip: text;
+    margin-top: 50px; /* タイトルを上部に移動 */
+}
+
+p {
+    font-size: 25px;
+    padding: 10px 20px; /* ボタンの余白 */
+    background-color: #b0c4de; /* 背景色 */
+    color: #f60; /* テキスト色 */
+    text-align: center; /* テキストを中央揃え */
+    text-decoration: none; /* 下線を消す */
+    border: none; /* ボーダーをなくす */
+    border-radius: 100px; /* 角丸にする */
+    cursor: pointer; /* カーソルをポインターに変更 */
+    transition: background-color 0.3s ease; /* ホバー時のアニメーション */
+    margin-bottom: 20px; /* h2の下に余白を追加 */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    overflow-y: scroll; /* 縦方向のみスクロール可能にする */
+}
+
+li {
+    margin-bottom: 20px;
+}
+
+button {
+    margin-bottom: 10px; /* ボタンの下部に余白を追加 */
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* リンクのホバー時のスタイル */
+a:hover {
+    color: #007bff;
+}
+
+/* リストのスタイル */
+li  {
+    height: 20px;
+    display: block;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: #333; /* リンクの色 */
+}
