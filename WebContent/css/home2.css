@@ -1,5 +1,14 @@
 @charset "UTF-8";
 
+body{
+    background-color: #2c3c85;
+}
+
+#header {
+    color: #ffffff; /* テキストの色を白に設定 */
+    text-align: center; /* テキストを中央揃えにする */
+}
+
 /* ページタイトル */
 h2 {
     font-size: 80px;
@@ -14,11 +23,34 @@ h2 {
     -webkit-background-clip: text;
 }
 
-/* 学習ボタン */
-#study {
+h4{
+    color: #ffffff;
+    font-weight: bold; /* 太字にする */
+}
+
+/* 学習ボタン外枠(仮) */
+#headera{
+    display: flex; /* Flexbox を使用 */
+    flex-direction: column; /* 縦方向に配置 */
+    align-items: center; /* 中央揃え */
+    background-color: #1473c0;
+    border-radius: 20px; /* 角を丸める */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* 下部に20pxのマージンを設定 */
+}
+
+/* 学習ボタン周り(仮) */
+#studya {
+    width: 95%; /* 全体の横幅の90% */
+    max-width: 100%; /* 最大幅を設定 */
+    margin-top: 20px; /* 上のマージンを設定 */
+    background-color: #ffffff;
+    border-radius: 20px; /* 角を丸める */
+    margin-bottom: 20px; /* 下部に20pxのマージンを設定 */
     text-align: center; /* テキストを中央揃えにする */
 }
 
+/* 学習ボタン */
 p {
     font-size: 50px; /* フォントサイズを大きくする */
     display: inline-block; /* インラインブロック要素にする */
@@ -47,7 +79,7 @@ p:hover {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
-h3 {
+#index h3 {
     font-weight: bold; /* 太字にする */
     color: #0079FF; /* 濃いスカイブルー色 */
 }
@@ -59,6 +91,24 @@ h3 {
     background-color: #ffffff;
     border-radius: 20px; /* 角を丸める */
     margin-bottom: 20px; /* 下部に20pxのマージンを設定 */
+}
+
+/* リンクのスタイル */
+a {
+    text-decoration: none;
+    color: #007bff;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #404040;
+}
+
+/* オーバーフローを防ぐためのclearfix */
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
 /* 単語一覧 */

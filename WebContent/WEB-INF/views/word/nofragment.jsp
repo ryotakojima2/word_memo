@@ -3,11 +3,12 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<title>Word</title>
-
+    <meta charset="UTF-8">
+    <title>IT特化単語帳</title>
 </head>
 <body>
+    <div id="header">
+    </div>
     <h2>ランダムなレコード</h2>
     <c:if test="${not empty nofragment}">
         <p>単語: ${nofragment.name}</p>
@@ -15,12 +16,12 @@
               <!-- 意味を表示する部分 -->
         <p>意味: ${meaning}</p>
 
-        <form action="meaning_n" method="post">
+        <form action="meaningn" method="post">
             <input type="hidden" name="id" value="${nofragment.id}">
             <input type="submit" value="意味を表示">
         </form>
 
-        <form action="checkbox_n" method="post">
+        <form action="checkboxn" method="post">
         <input type="hidden" name="id" value="${nofragment.id}">
        <input type="checkbox" name="fragment" value="1" ${nofragmnet.fragment == 1 ? 'checked' : ''}> 学習済み<br>
             <input type="hidden" name="fragment" value="0">
@@ -38,5 +39,7 @@
     </c:if>
 
     <p><a href="${pageContext.request.contextPath}/home">ホームへ戻る</a></p>
+    <div id="footer">
+    </div>
 </body>
 </html>

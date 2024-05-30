@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class Checkbox_nServlet
  */
-@WebServlet("/checkbox_n")
+@WebServlet("/checkboxn")
 public class Checkbox_nServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 

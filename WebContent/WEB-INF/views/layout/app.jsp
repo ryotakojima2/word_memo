@@ -9,6 +9,7 @@
     </head>
     <body>
             <div id="header">
+                <p>IT特化単語帳</p>
             </div>
             <div id="content">
                 ${param.content}

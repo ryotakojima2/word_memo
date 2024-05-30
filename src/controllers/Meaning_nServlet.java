@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import models.Word;
 import util.DBUtil;
 
-@WebServlet("/meaning")
+@WebServlet("/meaningn")
 public class Meaning_nServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 

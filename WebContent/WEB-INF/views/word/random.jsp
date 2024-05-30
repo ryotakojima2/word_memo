@@ -7,6 +7,8 @@
     <title>ランダムなレコード表示</title>
 </head>
 <body>
+    <div id="header">
+    </div>
     <h2>ランダムなレコード</h2>
     <c:if test="${not empty randomRecord}">
         <p>単語: ${randomRecord.name}</p>
@@ -38,5 +40,8 @@
     </c:if>
 
     <p><a href="${pageContext.request.contextPath}/home">ホームへ戻る</a></p>
+
+    <div id="footer">
+    </div>
 </body>
 </html>

@@ -1,17 +1,24 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<c:import url="../layout/app.jsp">
-    <c:param name="content">
-    <head>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>IT特化単語帳</title>
     <link rel="stylesheet" href="<c:url value='/css/home2.css' /> ">
-    </head>
+</head>
+<body>
     <h2>IT特化単語帳</h2>
+    <div id="header">
         <div id="study">
             <p><a href="${pageContext.request.contextPath}/random">学習する</a></p>
         </div>
-        <div id="main">
+    </div>
+    <div id="main">
+    <h4>メニュー</h4>
+
         <div id="index">
-                <h3><a href="${pageContext.request.contextPath}/index">単語一覧</a></h3>
+                <h3><a href="${pageContext.request.contextPath}/index">単語一覧へ</a></h3>
             <ul>
                 <c:forEach var="word" items="${words}" varStatus="loop">
                 <c:if test="${loop.index < 6}">
@@ -37,6 +44,9 @@
                 </c:forEach>
             </ul>
         </div>
-        </div>
-    </c:param>
-</c:import>
+
+    </div>
+    <div id="footer">
+    </div>
+</body>
+</html>
