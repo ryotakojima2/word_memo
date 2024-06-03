@@ -1,0 +1,96 @@
+@charset "UTF-8";
+
+/* ヘッダーとフッターのスタイル */
+#header,
+#footer {
+    background-color: #007bff; /* ボタンと同じ色に設定 */
+    color: #fff; /* 文字色を白に設定 */
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+/* ボタンのスタイル */
+input[type="submit"],
+input[type="button"],
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 100px;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover,
+input[type="button"]:hover,
+button:hover {
+    background-color: #49af4e; /* ボタンのホバー時の色 */
+}
+
+/* 見出しのスタイル */
+h1,
+h2 {
+    margin-bottom: 10px;
+}
+
+/* 段落のスタイル */
+p {
+    margin-bottom: 15px;
+}
+
+/* フォームのスタイル */
+form {
+    margin-bottom: 15px;
+}
+
+/* リンクのスタイル */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+   color: #404040;
+}
+
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+/* コンテナのスタイル */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* テキストボックスのスタイル */
+.textbox {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* ${randomRecord.name}を資格で囲むスタイル */
+.random-name {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* ${meaning}を資格で囲むスタイル */
+.meaning {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}

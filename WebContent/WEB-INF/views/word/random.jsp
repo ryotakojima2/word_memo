@@ -1,12 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<!DOCTYPE html>
-<html lang="ja">
+<c:import url="../layout/app.jsp">
+<c:param name="content">
 <head>
     <meta charset="UTF-8">
     <title>ランダムなレコード表示</title>
+    <link rel="stylesheet" href="<c:url value='/css/random.css' /> ">
 </head>
-<body>
     <div id="header">
     </div>
     <h2>ランダムなレコード</h2>
@@ -43,5 +43,5 @@
 
     <div id="footer">
     </div>
-</body>
-</html>
+</c:param>
+</c:import>

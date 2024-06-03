@@ -2,6 +2,19 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 </head>
 <link rel="stylesheet" href="<c:url value='/css/form.css' /> ">
+ <script>
+        function validateForm() {
+            var name = document.getElementById('name').value.trim();
+            var mean = document.getElementById('mean_msg').value.trim();
+            var category = document.getElementById('category_msg').value;
+
+            if (name === '' || mean === '' || category === '') {
+                alert('全ての項目を入力してください。');
+                return false;
+            }
+            return true;
+        }
+    </script>
 </head>
 
 <label for="Name">単語</label><br />

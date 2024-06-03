@@ -45,6 +45,9 @@ public class CreateServlet extends HttpServlet {
             String mean = request.getParameter("mean");
             w.setMean(mean);
 
+            w.setFragment(0);
+
+
             Timestamp date = new Timestamp(System.currentTimeMillis());
             w.setDate(date);
 

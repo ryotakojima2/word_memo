@@ -1,0 +1,71 @@
+@charset "UTF-8";
+
+/* ヘッダーとフッターのスタイル */
+#header,
+#footer {
+    background-color: #007bff; /* ボタンと同じ色に設定 */
+    color: #fff; /* 文字色を白に設定 */
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+
+
+/* ジャンル名のスタイル */
+h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    font-weight: bold;
+}
+
+/* 未登録メッセージのスタイル */
+p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* リンクのスタイル */
+a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* リンクホバー時のスタイル */
+a:hover {
+    color: #0056b3;
+}
+
+/* 戻るリンクのスタイル */
+#footer a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+/* 戻るリンクのホバー時のスタイル */
+#footer a:hover {
+    color: #0056b3;
+}
+
+/* フォームのスタイル */
+form {
+    margin-bottom: 20px;
+}
+
+/* ボタンのスタイル */
+input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* ボタンのホバー時のスタイル */
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}

@@ -1,0 +1,74 @@
+@charset "UTF-8";
+
+/* wrapperのスタイル */
+#wrapper {
+    background-color: rgba(255, 255, 255, 0.8); /* 背景を透明度のある白に設定 */
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 300px;
+    text-align: center;
+    padding-top: 50px; /* 上の余白を詰める */
+}
+
+/* h2のスタイル */
+h2 {
+    font-size: 80px;
+    color: #333;
+    margin-bottom: 20px;
+    line-height: 0.95em;
+    font-weight: bold;
+    color: transparent;
+    background: repeating-linear-gradient(45deg, #04ff0c 0 0.4em, #0091EA 0.4em 0.8em);
+    text-shadow: 0 0 0.2em rgba(255, 255, 255, 0.5);
+    -webkit-background-clip: text;
+}
+
+#main{
+    display: flex; /* Flexbox を使用 */
+    flex-direction: column; /* 縦方向に配置 */
+    align-items: center; /* 中央揃え */
+    background-color: #1473c0;
+    border-radius: 20px; /* 角を丸める */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+#show{
+    width: 95%; /* 全体の横幅の90% */
+    max-width: 100%; /* 最大幅を設定 */
+    margin-top: 20px; /* 上のマージンを設定 */
+    background-color: #ffffff;
+    border-radius: 20px; /* 角を丸める */
+    margin-bottom: 20px; /* 下部に20pxのマージンを設定 */
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+input[type="submit"] {
+    font-size: 20px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: #f60;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #49af4e;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #404040;
+}

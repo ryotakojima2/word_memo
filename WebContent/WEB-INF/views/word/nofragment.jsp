@@ -1,12 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<!DOCTYPE html>
-<html lang="ja">
+<c:import url="../layout/app.jsp">
+<c:param name="content">
 <head>
     <meta charset="UTF-8">
     <title>IT特化単語帳</title>
+    <link rel="stylesheet" href="<c:url value='/css/nofragment.css' /> ">
 </head>
-<body>
     <div id="header">
     </div>
     <h2>ランダムなレコード</h2>
@@ -28,8 +28,7 @@
             <input type="submit" value="覚えた！">
         </form>
 
-
-     <form action="nofragment" method="post">
+     <form action="nofragment" method="get">
         <input type="submit" value="次へ">
     </form>
 
@@ -41,5 +40,5 @@
     <p><a href="${pageContext.request.contextPath}/home">ホームへ戻る</a></p>
     <div id="footer">
     </div>
-</body>
-</html>
+</c:param>
+</c:import>

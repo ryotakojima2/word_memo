@@ -1,0 +1,73 @@
+@charset "UTF-8";
+
+#header,
+#footer {
+    background-color: #007bff; /* ボタンと同じ色に設定 */
+    color: #fff; /* 文字色を白に設定 */
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+
+
+/* wrapperのスタイル */
+#wrapper {
+    background-color: rgba(255, 255, 255, 0.8); /* 背景を透明度のある白に設定 */
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 50px; /* パディングを調整 */
+    text-align: center;
+    margin: 0 auto; /* 中央揃え */
+    max-width: 600px; /* 最大幅を指定 */
+}
+
+
+/* h2のスタイル */
+/*
+h2 {
+    font-size: 80px;
+    color: #333;
+    margin-bottom: 20px;
+    line-height: 0.95em;
+    font-weight: bold;
+    color: transparent;
+    background: repeating-linear-gradient(45deg, #04ff0c 0 0.4em, #0091EA 0.4em 0.8em);
+    text-shadow: 0 0 0.2em rgba(255, 255, 255, 1);
+    -webkit-background-clip: text;
+}
+*/
+
+
+/* ボタンのスタイル */
+input[type="submit"],
+input[type="button"],
+button {
+    font-size: 20px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff; /* 変更: ボタンの背景色 */
+    color: #fff; /* 変更: ボタンの文字色 */
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover,
+input[type="button"]:hover,
+button:hover {
+    background-color: #49af4e;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #404040;
+}
+
