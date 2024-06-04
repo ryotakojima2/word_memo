@@ -11,14 +11,14 @@
     <h2 id="headerTitle">IT特化単語帳</h2>
     <div id="header">
         <div id="study">
-            <p><a href="${pageContext.request.contextPath}/random">学習する</a></p>
+            <p><a href="${pageContext.request.contextPath}/selectmenu">学習する</a></p>
         </div>
     </div>
     <div id="main">
     <h4>メニュー</h4>
 
         <div id="index">
-                <h3><a href="${pageContext.request.contextPath}/index">単語一覧へ</a></h3>
+                <h3>単語一覧</h3>
             <ul>
                 <c:forEach var="word" items="${words}" varStatus="loop">
                 <c:if test="${loop.index < 6}">
@@ -30,6 +30,7 @@
                 </c:if>
                 </c:forEach>
             </ul>
+            <p id="toindex"><a href="${pageContext.request.contextPath}/index">単語一覧へ</a></p>
         </div>
 
         <div id="category">

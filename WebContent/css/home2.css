@@ -49,7 +49,7 @@ h4{
 }
 
 /* 学習ボタン */
-p {
+#study p {
     font-size: 50px; /* フォントサイズを大きくする */
     display: inline-block; /* インラインブロック要素にする */
     padding: 10px 20px; /* ボタンの余白 */
@@ -64,7 +64,7 @@ p {
     transition: background-color 0.3s ease; /* ホバー時のアニメーション */
 }
 
-p:hover {
+#study p:hover {
     transform: translateY(-10px); /* ホバー時に少し浮き上がる効果 */
 }
 
@@ -76,11 +76,6 @@ p:hover {
     background-color: #1473c0;
     border-radius: 20px; /* 角を丸める */
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-}
-
-#index h3 {
-    font-weight: bold; /* 太字にする */
-    color: #0079FF; /* 濃いスカイブルー色 */
 }
 
 #index, #category {
@@ -119,16 +114,98 @@ a:hover {
     clear: both;
 }
 
-/* 単語一覧 */
-#index {
-
+#toindex a{
+    text-align: right; /* 要素を右寄せにする */
 }
 
-
-
-/* ジャンル一覧 */
-#category{
-
+#toindex a{
+    font-size: 20px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #ffffff;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    position: absolute; /* 要素を親要素内で絶対配置 */
+    right: 0; /* 要素を右端に配置 */
 }
 
+#toindex a:hover {
+    background-color: #0056b3;
+}
 
+/* 一覧 */
+
+ul {
+    padding: 10px;
+    list-style-type: none;
+    counter-reset: list;
+    list-style: none;
+    padding: 0;
+    width: 350px;
+    font: 14px/1.6 'arial narrow', sans-serif;
+    margin: 0 0 0 35px;
+    width: 315px;
+}
+
+li {
+    font-size: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-weight: bold;
+    position: relative;
+    display: block;
+    text-decoration: none;
+    padding: 3px 3px 3px 8px;
+    margin: 8px 0 8px 30px;
+    background: #f1f8ff;
+    color: #333;
+    font-weight: bold;
+    -webkit-transition: all .3s ease-out;
+    -moz-transition: all .3s ease-out;
+    -ms-transition: all .3s ease-out;
+    -o-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+}
+
+li:hover {
+    background: #ffd9d3;
+}
+
+li:before {
+    content: counter(list);
+    counter-increment: list;
+    position: absolute;
+    left: -35px;
+    top: 50%;
+    height: 28px;
+    width: 28px;
+    margin-top: -1em;
+    background: #5c9ee7;
+    line-height: 28px;
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+}
+
+li:after {
+    content: '';
+    position: absolute;
+    left: -28px;
+    top: 50%;
+    margin-top: -6px;
+    border: 6px solid transparent;
+    -webkit-transition: all .3s ease-out;
+    -moz-transition: all .3s ease-out;
+    -ms-transition: all .3s ease-out;
+    -o-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+}
+
+li:hover:after {
+    left: -6px;
+    border-left-color: #5c9ee7;
+}

@@ -1,22 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<head>
-<link rel="stylesheet" href="<c:url value='/css/form.css' /> ">
-
- <script>
-        function validateForm() {
-            var name = document.getElementById('name').value.trim();
-            var mean = document.getElementById('mean_msg').value.trim();
-            var category = document.getElementById('category_msg').value;
-
-            if (name === '' || mean === '' || category === '') {
-                alert('全ての項目を入力してください。');
-                return false;
-            }
-            return true;
-        }
-    </script>
 </head>
+<link rel="stylesheet" href="<c:url value='/css/form.css' /> ">
 
 <label for="Name">単語</label><br />
 <input type="text" name="name" id="name" value="${newword.name}" />
@@ -36,4 +21,20 @@
 <br /><br />
 
 <input type="hidden" name="_token" value="${_token}" />
-<button type="submit">更新</button>
+
+<button type="submit" onclick="validateForm()">更新</button>
+
+<script>
+    function validateForm() {
+        var name = document.getElementById('name').value.trim();
+        var mean = document.getElementById('mean_msg').value.trim();
+        var category = document.getElementById('category_msg').value;
+
+        if (name === '' || mean === '' || category === '') {
+            alert('全ての項目を入力してください。');
+        } else {
+            // ここにフォーム送信の処理を追加する場合、コメントを外してください
+            // document.getElementById('form_id').submit();
+        }
+    }
+</script>

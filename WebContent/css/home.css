@@ -1,18 +1,72 @@
 @charset "UTF-8";
 
-#study {
-    width: 95%;
-    max-width: 100%;
-    margin-top: 20px;
-    background-color: #ffffff;
-    border-radius: 20px;
-    margin-bottom: 20px;
-    text-align: center;
-    /* 立体的なボタン効果 */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease;
+ul {
+    padding: 10px;
+    list-style-type: none;
+    counter-reset: list;
+    list-style: none;
+    padding: 0;
+    width: 350px;
+    font: 14px/1.6 'arial narrow', sans-serif;
+    margin: 0 0 0 35px;
+    width: 315px;
 }
 
-#study:hover {
-    transform: translateY(-3px); /* ホバー時に少し浮き上がる効果 */
+li {
+    font-size: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-weight: bold;
+    position: relative;
+    display: block;
+    text-decoration: none;
+    padding: 3px 3px 3px 8px;
+    margin: 8px 0 8px 30px;
+    background: #f1f8ff;
+    color: #333;
+    font-weight: bold;
+    -webkit-transition: all .3s ease-out;
+    -moz-transition: all .3s ease-out;
+    -ms-transition: all .3s ease-out;
+    -o-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+}
+
+li:hover {
+    background: #ffd9d3;
+}
+
+li:before {
+    content: counter(list);
+    counter-increment: list;
+    position: absolute;
+    left: -35px;
+    top: 50%;
+    height: 28px;
+    width: 28px;
+    margin-top: -1em;
+    background: #5c9ee7;
+    line-height: 28px;
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+}
+
+li:after {
+    content: '';
+    position: absolute;
+    left: -28px;
+    top: 50%;
+    margin-top: -6px;
+    border: 6px solid transparent;
+    -webkit-transition: all .3s ease-out;
+    -moz-transition: all .3s ease-out;
+    -ms-transition: all .3s ease-out;
+    -o-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+}
+
+li:hover:after {
+    left: -6px;
+    border-left-color: #5c9ee7;
 }

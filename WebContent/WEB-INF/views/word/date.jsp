@@ -4,40 +4,41 @@
 <c:param name="content">
 <head>
     <meta charset="UTF-8">
-    <title>IT特化単語帳</title>
-    <link rel="stylesheet" href="<c:url value='/css/nofragment.css' /> ">
+    <title>ランダムなレコード表示</title>
 </head>
     <div id="header">
     </div>
     <h2>ランダムなレコード</h2>
-    <c:if test="${not empty nofragment}">
-        <p>単語: ${nofragment.name}</p>
+    <c:if test="${not empty date}">
+        <p>単語: ${date.name}</p>
 
               <!-- 意味を表示する部分 -->
         <p>意味: ${meaning}</p>
 
-        <form action="meaningn" method="post">
-            <input type="hidden" name="id" value="${nofragment.id}">
+        <form action="meaningd" method="post">
+            <input type="hidden" name="id" value="${date.id}">
             <input type="submit" value="意味を表示">
         </form>
 
-        <form action="checkboxn" method="post">
-        <input type="hidden" name="id" value="${nofragment.id}">
-       <input type="checkbox" name="fragment" value="1" ${nofragment.fragment == 1 ? 'checked' : ''}> 学習済み<br>
+        <form action="checkboxd" method="post">
+            <input type="hidden" name="id" value="${date.id}">
+            <%-- データベースのfragmentの値が1の場合、チェックボックスをチェック済みにする --%>
+            <input type="checkbox" name="fragment" value="1" ${date.fragment == 1 ? 'checked' : ''}> 学習済み<br>
             <input type="hidden" name="fragment" value="0">
             <input type="submit" value="覚えた！">
         </form>
 
-     <form action="nofragment" method="get">
-        <input type="submit" value="次へ">
-    </form>
 
+          <form action="date" method="get">
+        <input type="submit" value="次へ">
+        </form>
     </c:if>
-    <c:if test="${empty nofragmnet}">
-        <p>レコードが見つかりませんでした。</p>
+    <c:if test="${empty date}">
+        <p>すべての単語を学習しました。</p>
     </c:if>
 
     <p><a href="${pageContext.request.contextPath}/home">ホームへ戻る</a></p>
+
     <div id="footer">
     </div>
 </c:param>

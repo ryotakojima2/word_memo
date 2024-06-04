@@ -1,14 +1,5 @@
 @charset "UTF-8";
 
-/* ヘッダーとフッターのスタイル */
-#header,
-#footer {
-    background-color: #007bff; /* ボタンと同じ色に設定 */
-    color: #fff; /* 文字色を白に設定 */
-    padding: 10px;
-    margin-bottom: 20px;
-}
-
 /* ボタンのスタイル */
 input[type="submit"],
 input[type="button"],
@@ -25,13 +16,7 @@ button {
 input[type="submit"]:hover,
 input[type="button"]:hover,
 button:hover {
-    background-color: #49af4e; /* ボタンのホバー時の色 */
-}
-
-/* 見出しのスタイル */
-h1,
-h2 {
-    margin-bottom: 10px;
+    transform: translateY(-10px); /* ホバー時に少し浮き上がる効果 */
 }
 
 /* 段落のスタイル */
@@ -86,7 +71,7 @@ input[type="checkbox"] {
     box-sizing: border-box;
 }
 
-/* ${meaning}を資格で囲むスタイル */
+/* ${meaning}を四角で囲むスタイル */
 .meaning {
     border: 1px solid #ccc;
     padding: 10px;

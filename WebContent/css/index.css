@@ -1,22 +1,23 @@
 @charset "UTF-8";
 
 h2 {
+    color: #ffffff;
     text-align: center; /* オプション: テキストを中央揃えにする */
-    font-size: 80px;
-    /*background-color: #fff;*/
-    border-radius: 3px;
-    padding: 12px 0px 12px 15px ;
-    margin: 30px 0px 20px;
-    *box-shadow:0 0 20px rgba(0,0,0,0.3);/* 浮き出るように影追加*/
+    font-size: 30px;
+    margin-bottom: 20px;
+    line-height:0.95em;
+    font-weight:bold;
+    text-shadow: 0 0 0.2em rgba(255,255,255,1);
 }
+
 
 /* main */
 #main{
-    display: flex; /* Flexbox を使用 */
-    flex-direction: column; /* 縦方向に配置 */
-    align-items: center; /* 中央揃え */
-    background-color: #1473c0;
-    border-radius: 20px; /* 角を丸める */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*background-color: #1473c0;*/
+    border-radius: 20px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
@@ -25,18 +26,18 @@ h2 {
     padding: 10px 20px; /* ボタンの余白 */
     display: inline-block; /* インラインブロック要素にする */
     padding: 10px 20px; /* ボタンの余白 */
-    background-color:#ffffff; /* 背景色 */
-    color: #f60; /* テキスト色 */
+    background-color:#007bff; /* 背景色 */
     text-align: center; /* テキストを中央揃え */
-    text-decoration: none; /* 下線を消す */
+    color: #ffffff; /* ボタンのテキスト色 */
     border: none; /* ボーダーをなくす */
-    border-radius: 100px; /* 角丸にする */
+    border-radius: 5px; /* 角丸にする */
     cursor: pointer; /* カーソルをポインターに変更 */
     transition: background-color 0.3s ease; /* ホバー時のアニメーション */
+    text-decoration: none; /* 下線を消す */
 }
 
 #main p:hover {
-    transform: translateY(-10px); /* ホバー時に少し浮き上がる効果 */
+    background-color: #0056b3; /* ホバー時の背景色 */
 }
 
 ul {

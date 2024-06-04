@@ -2,6 +2,10 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <c:import url="../layout/app.jsp">
     <c:param name="content">
+
+    <head>
+        <link rel="stylesheet" href="<c:url value='/css/showCategory.css' /> ">
+    </head>
         <h2>ジャンル:${category.categoryName} の詳細ページ</h2>
         <ul>
             <c:choose>

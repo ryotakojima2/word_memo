@@ -7,6 +7,10 @@
     </head>
     <div id="main">
         <h2>-単語集-</h2>
+
+        <p><a href="${pageContext.request.contextPath}/new">単語の追加</a></p>
+        <p><a href="${pageContext.request.contextPath}/home">ホームへ戻る</a></p>
+
         <ul>
             <c:forEach var="word" items="${words}">
                 <li>
@@ -17,8 +21,6 @@
             </c:forEach>
         </ul>
 
-        <p><a href="${pageContext.request.contextPath}/new">単語の追加</a></p>
-        <p><a href="${pageContext.request.contextPath}/home">ホームへ戻る</a></p>
     </div>
 
 
