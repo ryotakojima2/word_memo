@@ -1,0 +1,113 @@
+@charset "UTF-8";
+
+h3 {
+    padding: 10px;
+    font-size: 50px;
+    color: #333;
+    margin-bottom: 20px;
+    line-height: 0.95em;
+    font-weight: bold;
+    color: black;
+}
+
+/*h3（タイトル）のデザイン*/
+h3 {
+  position: relative;
+  color: white;
+  background: #81d0cb;
+  line-height: 1.4;
+  padding: 0.5em 0.5em 0.5em 1.8em;
+}
+
+h3:before {
+  font-family: "Font Awesome 5 Free";
+  content: "\2713";
+  font-weight: 900;
+  position: absolute;
+  left : 0.5em; /*左端からのアイコンまでの距離*/
+  border: 2px solid white; /* 四角の枠線 */
+  padding: 0em; /* 枠線とアイコンの間の余白 */
+  border-radius: 0%; /* 枠線を丸くする */
+}
+
+/* ホームへ戻るボタン */
+#back a {
+  position: relative;
+  display: inline-block;
+  height: 30px;
+  margin-left: 30px;
+  padding: 1rem 2rem 1rem 3rem;
+  color: #fff;
+  background: #007bff;
+  font-weight: bold; /* フォントを太くする */
+}
+
+#back a:before {
+  position: absolute;
+  top: 0;
+  left: -30px;
+  content: '';
+  border-width: 32px 30px 32px 0;
+  border-style: solid;
+  border-color: transparent #007bff transparent transparent;
+}
+
+#back a:after {
+  position: absolute;
+  top: calc(50% - 7px);
+  left: -10px;
+  width: 14px;
+  height: 14px;
+  content: '';
+  border-radius: 50%;
+  background: #fff;
+}
+
+h3 + #main {
+  margin-top: 20px; /* h3要素の下に20pxのマージンを設定 */
+}
+
+/* main部分 */
+#main{
+    width: 70%; /* 全体の横幅の90% */
+    max-width: 100%; /* 最大幅を設定 */
+    margin: 20px auto; /* 上下20px、左右を自動で中央揃え */
+    background-color: #ffffff;
+    border-radius: 20px; /* 角を丸める */
+    box-shadow: 0 0 20px rgba(0,0,0,1); /* 浮き出るように影追加 */
+}
+
+#study p{
+  font-size:20px;
+  margin: 0px 0px 50px 30px;
+}
+
+
+#study a{
+  text-decoration: none;
+  color: #18272F;
+  font-weight: 700;
+  position: relative;
+}
+#study a:before{
+  content: '';
+  background-color: hsla(196, 61%, 58%, .75);
+  position: absolute;
+  left: 0;
+  bottom: 3px;
+  width: 100%;
+  height: 8px;
+  z-index: -1;
+  transition: all .3s ease-in-out;
+}
+
+
+
+#study a:hover{
+  color:#18272f;
+}
+
+#study a:hover:before{
+  bottom: 0;
+  height: 100%;
+}

@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="<c:url value='/css/show.css' /> ">
     </head>
         <div id="main">
-        <h2>単語 : ${word.name} の詳細ページ</h2>
+        <h3>単語 : ${word.name} の詳細</h3>
 
         <div id="show">
         <p>単語名称：<c:out value="${word.name}" /></p>
@@ -24,10 +24,10 @@
 
         <p>作成日時：<fmt:formatDate value="${word.date}" pattern="yyyy-MM-dd HH:mm:ss" /></p>
         </div>
-        <p class="button"><a href="${pageContext.request.contextPath}/edit?id=${word.id}">編集する</a></p>
+        <p id="edittap"><a href="${pageContext.request.contextPath}/edit?id=${word.id}">編集する</a></p>
         </div>
 
-        <p class="button"><a href="${pageContext.request.contextPath}/index">単語一覧</a></p>
+        <p id="button"><a href="${pageContext.request.contextPath}/index">単語一覧へ</a></p>
 
     </c:param>
 </c:import>

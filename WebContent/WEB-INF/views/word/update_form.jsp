@@ -34,6 +34,7 @@
             alert('全ての項目を入力してください。');
             event.preventDefault();
         } else {
+             alert('更新しました！');
             // ここにフォーム送信の処理を追加する場合、コメントを外してください
             // document.getElementById('form_id').submit();
         }

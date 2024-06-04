@@ -6,11 +6,12 @@
     <head>
         <link rel="stylesheet" href="<c:url value='/css/showCategory.css' /> ">
     </head>
-        <h2>ジャンル:${category.categoryName} の詳細ページ</h2>
+        <div id="main">
+        <h3>ジャンル:${category.categoryName} の登録済一覧</h3>
         <ul>
             <c:choose>
                 <c:when test="${empty words}">
-                    <p>まだ未登録です。</p>
+                    <p id="noregiste">まだ未登録です。</p>
                 </c:when>
                 <c:otherwise>
                     <c:forEach var="word" items="${words}">
@@ -23,8 +24,9 @@
                 </c:otherwise>
             </c:choose>
         </ul>
+        </div>
 
-        <p><a href="${pageContext.request.contextPath}/home">ホームへ戻る</a></p>
+        <p id="button"><a href="${pageContext.request.contextPath}/home">ホームへ戻る</a></p>
 
 
     </c:param>

@@ -4,11 +4,11 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>IT特化単語帳</title>
+    <title>IT単語帳アプリ</title>
     <link rel="stylesheet" href="<c:url value='/css/home2.css' /> ">
 </head>
 <body>
-    <h2 id="headerTitle">IT特化単語帳</h2>
+    <h2 id="headerTitle">IT単語帳</h2>
     <div id="header">
         <div id="study">
             <p><a href="${pageContext.request.contextPath}/selectmenu">学習する</a></p>
@@ -98,7 +98,7 @@
             index = (index + 1) % colors.length;
         }
 
-        setInterval(changeTitleColor, 500); // h2の色を5秒ごとに変更
+        setInterval(changeTitleColor, 100); // h2の色を0.5秒ごとに変更
     </script>
 </body>
 </html>

@@ -8,7 +8,7 @@
     <p id="back"><a href="${pageContext.request.contextPath}/home">ホームへ戻る</a></p>
     <h2>-単語集-</h2>
     <div id="main">
-        <p><a href="${pageContext.request.contextPath}/new">単語の追加</a></p>
+        <p id="new"><a href="${pageContext.request.contextPath}/new">単語の追加</a></p>
 
         <ul>
             <c:forEach var="word" items="${words}">
@@ -21,6 +21,9 @@
         </ul>
 
     </div>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <div id="pagetop"><a href="#top"><i class="fas fa-arrow-up"></i></a></div>
 
 
     </c:param>

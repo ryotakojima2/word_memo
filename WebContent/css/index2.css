@@ -2,7 +2,7 @@
 
 h2 {
     color: #ffffff;
-    text-align: center; /* オプション: テキストを中央揃えにする */
+    text-align: center;
     font-size: 30px;
     margin-bottom: 20px;
     line-height:0.95em;
@@ -10,23 +10,36 @@ h2 {
     text-shadow: 0 0 0.2em rgba(255,255,255,1);
 }
 
-#back {
-  background-color: #007bff;
+#back a {
+  position: relative;
+  display: inline-block;
+  height: 30px;
+  margin-left: 30px;
+  padding: 1rem 2rem 1rem 3rem;
   color: #fff;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+  background: #007bff;
+  font-weight: bold; /* フォントを太くする */
 }
 
-#back:hover {
-  background-color: #0056b3;
+#back a:before {
+  position: absolute;
+  top: 0;
+  left: -30px;
+  content: '';
+  border-width: 32px 30px 32px 0;
+  border-style: solid;
+  border-color: transparent #007bff transparent transparent;
 }
 
-#back i {
-  margin-right: 5px;
+#back a:after {
+  position: absolute;
+  top: calc(50% - 7px);
+  left: -10px;
+  width: 14px;
+  height: 14px;
+  content: '';
+  border-radius: 50%;
+  background: #fff;
 }
 
 /* main */
@@ -39,23 +52,42 @@ h2 {
     box-shadow: 0 0 20px rgba(0,0,0,1); /* 浮き出るように影追加 */
 }
 
-#main p {
-    font-size: 25px;
-    padding: 10px 20px; /* ボタンの余白 */
-    display: inline-block; /* インラインブロック要素にする */
-    padding: 10px 20px; /* ボタンの余白 */
-    background-color:#007bff; /* 背景色 */
-    text-align: center; /* テキストを中央揃え */
-    color: #ffffff; /* ボタンのテキスト色 */
-    border: none; /* ボーダーをなくす */
-    border-radius: 5px; /* 角丸にする */
-    cursor: pointer; /* カーソルをポインターに変更 */
-    transition: background-color 0.3s ease; /* ホバー時のアニメーション */
-    text-decoration: none; /* 下線を消す */
+#new{
+  position: relative;
+  display: inline-block;
+  padding: 1rem 2rem 1rem 2rem;
+  color: #fff;
+  border-radius: 0 100vh 100vh 0;
+  background: #007bff;
 }
 
-#main p:hover {
+#new:before{
+  position: absolute;
+  top: calc(50% - 7px);
+  left: 120px;
+  width: 14px;
+  height: 14px;
+  content: '';
+  border-radius: 50%;
+  background: #fff;
+}
+
+#new:hover {
     background-color: #0056b3; /* ホバー時の背景色 */
+}
+
+#new a {
+    display: inline-block;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: left; /* テキストを左寄せにする */
+    font-weight: bold; /* フォントを太くする */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#new a:hover {
+    background-color: #0056b3;
 }
 
 ul {
@@ -66,7 +98,7 @@ ul {
     padding: 10;
     width: 350px;
     font: 14px/1.6 'arial narrow', sans-serif;
-    margin: 0 0 0 35px;
+    margin: 0 0 0 75px;
     width: 315px;
 }
 
@@ -152,4 +184,35 @@ li  {
     border: 1px solid #ccc;
     border-radius: 5px;
     color: #333; /* リンクの色 */
+}
+
+#pagetop {
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
+    margin: 0;
+
+}
+#pagetop a{
+    position: relative;
+    display: flex;
+    width: 65px;
+    height: 65px;
+    justify-content: center;
+    background:#333333;/*背景の色を変える*/
+    transition: opacity .6s ease;
+    color: #FFFFFF;/*アイコンの色を変える*/
+    align-items: center;
+    text-decoration: none;
+    font-size: 32px;
+
+}
+#pagetop a:hover {
+    opacity: .3;
+}
+@media screen and (max-width:767px) {
+#pagetop a {
+    width: 50px;
+    height: 50px;
+}
 }

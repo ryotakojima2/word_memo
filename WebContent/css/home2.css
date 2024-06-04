@@ -84,7 +84,7 @@ h4{
     margin-top: 20px; /* 上のマージンを設定 */
     background-color: #ffffff;
     border-radius: 20px; /* 角を丸める */
-    margin-bottom: 20px; /* 下部に20pxのマージンを設定 */
+    margin-bottom: 60px; /* 下部に20pxのマージンを設定 */
     box-shadow:0 0 20px rgba(0,0,0,1);/* 浮き出るように影追加*/
 }
 
@@ -114,6 +114,7 @@ a:hover {
     clear: both;
 }
 
+/* 一覧ボタンへ */
 #toindex a{
     text-align: right; /* 要素を右寄せにする */
 }
@@ -126,8 +127,9 @@ a:hover {
     color: #ffffff;
     text-decoration: none;
     border: none;
-    border-radius: 5px;
+    border-radius:0 100vh 100vh 0;
     cursor: pointer;
+    font-weight: bold; /* フォントを太くする */
     transition: background-color 0.3s ease, transform 0.3s ease;
     position: absolute; /* 要素を親要素内で絶対配置 */
     right: 0; /* 要素を右端に配置 */
@@ -136,6 +138,47 @@ a:hover {
 #toindex a:hover {
     background-color: #0056b3;
 }
+
+/*
+#toindex{
+  position: relative;
+  display: inline-block;
+  padding: 1rem 2rem 1rem 2rem;
+  color: #fff;
+  border-radius: 100vh 0 0 100vh;
+  background: #007bff;
+  text-align: right;
+}
+
+#toindex:before{
+  position: absolute;
+  top: calc(50% - 7px);
+  right: 30px;
+  left: 30px;
+  width: 14px;
+  height: 14px;
+  content: '';
+  border-radius: 50%;
+  background: #fff;
+}
+
+#toindex:hover {
+    background-color: #0056b3;
+}
+
+#toindex a {
+    display: inline-block;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: left;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#toindex a:hover {
+    background-color: #0056b3;
+}
+*/
 
 /* 一覧 */
 

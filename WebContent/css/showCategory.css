@@ -2,25 +2,29 @@
 
 
 /* ジャンル名のスタイル */
-h2 {
-    padding:10px;
-    font-size: 70px;
-    color: #333;
-    margin-bottom: 20px;
-    line-height: 0.95em;
-    font-weight: bold;
-    color: black;
-    text-shadow: 0 0 0.2em rgba(255, 255, 255, 0.5);
+h3 {
+    border-bottom: 6px double #000;
+}
 
-    width: 95%; /* 全体の横幅の90% */
+#main{
+    display: flex; /* Flexbox を使用 */
+    flex-direction: column; /* 縦方向に配置 */
+    align-items: center; /* 中央揃え */
+    background-color: #1473c0;
+    margin: 20px auto; /* 上下20px、左右を自動で中央揃え */
+    border-radius: 20px; /* 角を丸める */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+
+    padding:10px;
+    width: 70%; /* 全体の横幅の90% */
     max-width: 100%; /* 最大幅を設定 */
     margin-top: 20px; /* 上のマージンを設定 */
-    background-color: #ffffff;
+    background-color: #fff;
     border-radius: 20px; /* 角を丸める */
     margin-bottom: 20px; /* 下部に20pxのマージンを設定 */
     text-align: center; /* テキストを中央揃えにする */
     border: 2px solid black; /* 黒線で囲む */
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5); /* 浮かす効果を与える */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); /* 浮かす効果を与える */
 }
 
 #choose{
@@ -45,56 +49,139 @@ h2 {
 
 }
 
-
-a {
-    color: #007bff;
+#button{
+    font-size: 15px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff; /* 変更: ボタンの背景色 */
+    color: #fff; /* 変更: ボタンの文字色 */
+    text-align: center;
     text-decoration: none;
-    transition: color 0.3s ease;
-
-    padding:10px;
-    width: 95%; /* 全体の横幅の90% */
-    max-width: 100%; /* 最大幅を設定 */
-    margin-top: 20px; /* 上のマージンを設定 */
-    background-color: #ffffff;
-    border-radius: 20px; /* 角を丸める */
-    margin-bottom: 20px; /* 下部に20pxのマージンを設定 */
-    text-align: center; /* テキストを中央揃えにする */
-    border: 2px solid black; /* 黒線で囲む */
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); /* 浮かす効果を与える */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-a:hover {
-    color: #404040;
-
+#button:hover {
+    background-color: #0056b3; /* ホバー時の背景色 */
 }
 
-a.show:hover{
-     transform: translateY(-10px); /* ホバー時に少し浮き上がる効果 */
+#button a {
+    display: inline-block; /* ボタンとして扱うため */
+    padding: 10px 10px; /* ボタンの余白 */
+    background-color: #007bff; /* ボタンの背景色 */
+    color: #ffffff; /* ボタンのテキスト色 */
+    text-decoration: none;
+    border-radius: 5px; /* 角丸 */
+    font-weight: bold; /* フォントを太くする */
+    transition: background-color 0.3s ease; /* ホバー時のアニメーション */
 }
 
-
-
-
+#button a:hover {
+    background-color: #0056b3; /* ホバー時の背景色 */
+}
 
 /* リストアイテムのスタイル */
-ul li {
-    margin-bottom: 10px; /* 下マージンを設定 */
+ul {
+    padding: 10px;
+    list-style-type: none;
+    counter-reset: list;
+    list-style: none;
+    padding: 10;
+    width: 350px;
+    font: 14px/1.6 'arial narrow', sans-serif;
+    margin: 0 0 0 0px;
+    width: 315px;
 }
+
+li {
+    font-size: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-weight: bold;
+    position: relative;
+    display: block;
+    text-decoration: none;
+    padding: 3px 3px 3px 8px;
+    margin: 8px 0 8px 60px;
+    background: #f1f8ff;
+    color: #333;
+    font-weight: bold;
+    -webkit-transition: all .3s ease-out;
+    -moz-transition: all .3s ease-out;
+    -ms-transition: all .3s ease-out;
+    -o-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+}
+
+li:hover {
+    /*コンテンツボックスの色*/
+    background: pink;
+}
+
+li:before {
+    content: counter(list);
+    counter-increment: list;
+    position: absolute;
+    left: -35px;
+    top: 50%;
+    height: 28px;
+    width: 28px;
+    margin-top: -1em;
+    background: #5c9ee7;
+    line-height: 28px;
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+}
+
+li:after {
+    content: '';
+    position: absolute;
+    left: -28px;
+    top: 50%;
+    margin-top: -6px;
+    border: 6px solid transparent;
+    -webkit-transition: all .3s ease-out;
+    -moz-transition: all .3s ease-out;
+    -ms-transition: all .3s ease-out;
+    -o-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+}
+
+li:hover:after {
+    left: -6px;
+    border-left-color: #5c9ee7;
+}
+
+button {
+    margin-bottom: 10px; /* ボタンの下部に余白を追加 */
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* リンクのホバー時のスタイル */
+a:hover {
+    color: #007bff;
+}
+
+/* リストのスタイル */
+li  {
+    height: 20px;
+    display: block;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: #333; /* リンクの色 */
+}
+
 
 /* 未登録メッセージのスタイル */
-p {
+#noregiste {
     font-size: 20px; /* フォントサイズを設定 */
     color: #666; /* テキストカラーを設定 */
-}
-
-/* 戻るボタンのスタイル */
-p a {
-    color: #007bff; /* リンクのカラーを設定 */
-    text-decoration: none; /* 下線をリセット */
-}
-
-/* 戻るボタンのホバー時のスタイル */
-p a:hover {
-    color: green; /* ホバー時のカラーを設定 */
-    transform: translateY(-10px); /* ホバー時に少し浮き上がる効果 */
 }

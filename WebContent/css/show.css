@@ -1,7 +1,9 @@
 @charset "UTF-8";
 
-/* h2のスタイル */
-h2 {
+/* h3のスタイル */
+h3 {
+    border-bottom: 6px double #000;
+    /*
     padding:10px;
     font-size: 70px;
     color: #333;
@@ -11,29 +13,27 @@ h2 {
     color: black;
     text-shadow: 0 0 0.2em rgba(255, 255, 255, 0.5);
 
-    width: 95%; /* 全体の横幅の90% */
-    max-width: 100%; /* 最大幅を設定 */
-    margin-top: 20px; /* 上のマージンを設定 */
+    width: 95%;
+    max-width: 100%;
+    margin-top: 20px;
     background-color: #ffffff;
-    border-radius: 20px; /* 角を丸める */
-    margin-bottom: 20px; /* 下部に20pxのマージンを設定 */
-    text-align: center; /* テキストを中央揃えにする */
-    border: 2px solid black; /* 黒線で囲む */
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5); /* 浮かす効果を与える */
-
+    border-radius: 20px;
+    margin-bottom: 20px;     text-align: center;
+    border: 2px solid black;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+    */
 }
 
 #main{
     display: flex; /* Flexbox を使用 */
     flex-direction: column; /* 縦方向に配置 */
-    align-items: center; /* 中央揃え */
+    margin: 20px auto; /* 上下20px、左右を自動で中央揃え */
     background-color: #1473c0;
     border-radius: 20px; /* 角を丸める */
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 
-
     padding:10px;
-    width: 95%; /* 全体の横幅の90% */
+    width: 70%; /* 全体の横幅の90% */
     max-width: 100%; /* 最大幅を設定 */
     margin-top: 20px; /* 上のマージンを設定 */
     background-color: #fff;
@@ -51,10 +51,50 @@ h2 {
     background-color: #ffffff;
     border-radius: 20px; /* 角を丸める */
     margin-bottom: 20px; /* 下部に20pxのマージンを設定 */
-
 }
 
-.button{
+/* 編集ボタン */
+#edittap{
+  position: relative;
+  display: inline-flex;
+  padding: 1rem 2rem 1rem 2rem;
+  color: #fff;
+  border-radius: 0 100vh 100vh 0;
+  background: #007bff;
+  width: 80px; /* 親要素に依存せずにサイズを指定 */
+}
+
+#edittap:before{
+  position: absolute;
+  top: calc(50% - 7px);
+  left: 120px;
+  width: 14px;
+  height: 14px;
+  content: '';
+  border-radius: 50%;
+  background: #fff;
+}
+
+#edittap:hover {
+    background-color: #0056b3; /* ホバー時の背景色 */
+}
+
+#edittap a {
+    display: inline-flex;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: left; /* テキストを左寄せにする */
+    font-weight: bold; /* フォントを太くする */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#edittap a:hover {
+    background-color: #0056b3;
+}
+
+/* 単語一覧ボタン */
+#button{
     font-size: 15px;
     display: inline-block;
     padding: 10px 20px;
@@ -68,22 +108,24 @@ h2 {
     transition: background-color 0.3s ease;
 }
 
-.button:hover {
+#button:hover {
     background-color: #0056b3; /* ホバー時の背景色 */
 }
 
-.button a {
+#button a {
     display: inline-block; /* ボタンとして扱うため */
     padding: 10px 10px; /* ボタンの余白 */
     background-color: #007bff; /* ボタンの背景色 */
     color: #ffffff; /* ボタンのテキスト色 */
     text-decoration: none;
     border-radius: 5px; /* 角丸 */
+    font-weight: bold; /* フォントを太くする */
     transition: background-color 0.3s ease; /* ホバー時のアニメーション */
 }
 
-.button a:hover {
-    background-color: #0056b3; /* ホバー時の背景色 */
+
+#button a:hover {
+    background-color: #0056b3;
 }
 
 /*

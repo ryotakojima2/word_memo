@@ -12,8 +12,14 @@
         <form action="${pageContext.request.contextPath}/destroy" method="post">
             <input type="hidden" name="_token" value="${_token}" />
             <input type="hidden" name="id" value="${word.id}">
-            <input type="submit" value="この単語を削除する">
+            <input type="submit" onclick="dmessage()" value="この単語を削除する">
         </form>
+
+        <script>
+        function dmessage(){
+            alert('削除しました！');
+        }
+        </script>
 
         <p><a href="${pageContext.request.contextPath}/index">単語一覧に戻る</a></p>
 
