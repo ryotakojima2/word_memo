@@ -22,16 +22,17 @@
 
 <input type="hidden" name="_token" value="${_token}" />
 
-<button type="submit" onclick="validateForm()">更新</button>
+<button type="submit" onclick="validateForm(event)">更新</button>
 
 <script>
-    function validateForm() {
+    function validateForm(event) {
         var name = document.getElementById('name').value.trim();
         var mean = document.getElementById('mean_msg').value.trim();
         var category = document.getElementById('category_msg').value;
 
         if (name === '' || mean === '' || category === '') {
             alert('全ての項目を入力してください。');
+            event.preventDefault();
         } else {
             // ここにフォーム送信の処理を追加する場合、コメントを外してください
             // document.getElementById('form_id').submit();

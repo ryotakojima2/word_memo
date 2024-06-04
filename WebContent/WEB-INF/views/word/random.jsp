@@ -24,7 +24,7 @@
         <form action="checkbox" method="post">
             <input type="hidden" name="id" value="${randomRecord.id}">
             <%-- データベースのfragmentの値が1の場合、チェックボックスをチェック済みにする --%>
-            <input type="checkbox" name="fragment" value="1" ${randomRecord.fragment == 1 ? 'checked' : ''}> Check to mark as complete<br>
+            <input type="checkbox" name="fragment" value="1" ${randomRecord.fragment == 1 ? 'checked' : ''}> 学習済み<br>
             <input type="hidden" name="fragment" value="0">
             <input type="submit" value="覚えた！">
         </form>

@@ -29,7 +29,9 @@
         </form>
 
 
-          <form action="date" method="get">
+          <form action="nextrecordd" method="get">
+
+            <input type="hidden" name="id" value="${date.id}">
         <input type="submit" value="次へ">
         </form>
     </c:if>

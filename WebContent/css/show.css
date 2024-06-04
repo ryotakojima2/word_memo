@@ -54,29 +54,37 @@ h2 {
 
 }
 
-/*
-form {
-    margin-bottom: 20px;
-}
-
-input[type="submit"] {
-    font-size: 20px;
+.button{
+    font-size: 15px;
     display: inline-block;
     padding: 10px 20px;
-    background-color: #ffffff;
-    color: #f60;
+    background-color: #007bff; /* 変更: ボタンの背景色 */
+    color: #fff; /* 変更: ボタンの文字色 */
     text-align: center;
     text-decoration: none;
     border: none;
-    border-radius: 100px;
+    border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
-input[type="submit"]:hover {
-    background-color: #49af4e;
+.button:hover {
+    background-color: #0056b3; /* ホバー時の背景色 */
 }
-*/
+
+.button a {
+    display: inline-block; /* ボタンとして扱うため */
+    padding: 10px 10px; /* ボタンの余白 */
+    background-color: #007bff; /* ボタンの背景色 */
+    color: #ffffff; /* ボタンのテキスト色 */
+    text-decoration: none;
+    border-radius: 5px; /* 角丸 */
+    transition: background-color 0.3s ease; /* ホバー時のアニメーション */
+}
+
+.button a:hover {
+    background-color: #0056b3; /* ホバー時の背景色 */
+}
 
 /*
 a {

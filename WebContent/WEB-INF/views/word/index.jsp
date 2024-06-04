@@ -3,13 +3,12 @@
 <c:import url="../layout/app.jsp">
     <c:param name="content">
     <head>
-        <link rel="stylesheet" href="<c:url value='/css/index.css' /> ">
+        <link rel="stylesheet" href="<c:url value='/css/index2.css' /> ">
     </head>
+    <p id="back"><a href="${pageContext.request.contextPath}/home">ホームへ戻る</a></p>
+    <h2>-単語集-</h2>
     <div id="main">
-        <h2>-単語集-</h2>
-
         <p><a href="${pageContext.request.contextPath}/new">単語の追加</a></p>
-        <p><a href="${pageContext.request.contextPath}/home">ホームへ戻る</a></p>
 
         <ul>
             <c:forEach var="word" items="${words}">

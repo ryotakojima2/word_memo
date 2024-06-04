@@ -33,9 +33,7 @@
     </form>
 
     </c:if>
-    <c:if test="${empty nofragmnet}">
-        <p>レコードが見つかりませんでした。</p>
-    </c:if>
+
 
     <p><a href="${pageContext.request.contextPath}/home">ホームへ戻る</a></p>
     <div id="footer">
